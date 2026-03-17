@@ -12,6 +12,6 @@ int main() {
     int *ptr_a = &a;
     int *ptr_b = &b;
     int c =sum(&a, &b);
-    cout << "sum is" << c << endl;
+    cout << "sum is" << c << endl; // sum comments added 
     return 0;
 }
