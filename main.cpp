@@ -1,17 +1,35 @@
 #include <iostream>
 using namespace std;
+#include <vector>
+#include <algorithm>
+#include <thread>
+#include <mutex>
+#include <condition_variable>
 
+void acc_on() {
+   cout << "AC on" << endl;
+}   
 
-int sum(int *a, int *b) {
-    return *a + *b;
-}
+void acc_off() {
+   cout << "AC off" << endl;
+}   
+
+void acc_standby() {
+   cout << "AC standby" << endl;
+}   
 
 int main() {
 
-    int a = 5, b = 12;
-    int *ptr_a = &a;
-    int *ptr_b = &b;
-    int c =sum(&a, &b);
-    cout << "sum is" << c << endl; // sum comments added 
-    return 0;
+   void (*state)();
+
+    state = acc_on;
+    state();
+    state = acc_off;
+    state();
+    state = acc_standby;
+    state();    
+   
+   
+   return 0;
+
 }
