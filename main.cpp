@@ -27,7 +27,7 @@ int main() {
     state = acc_off;
     state();
     state = acc_standby;
-    state();    
+    state();   // comments added  
    
    
    return 0;
