@@ -22,9 +22,9 @@ int main() {
 
    void (*state)();
 
-    state = acc_on;
+    state = acc_on; // ACC on state
     state();
-    state = acc_off;
+    state = acc_off; // ACC off state 
     state();
     state = acc_standby;
     state();   // comments added  
